@@ -1,6 +1,8 @@
-#include "factor.h"
+//#include "factor.h"
 #include "totient.h"
 
+
+/*
 
 long totient( long n ){
   if ( n <= 0) return 0;
@@ -21,4 +23,20 @@ long totient( long n ){
     else ans *= (flist[k] - 1);
   }
   return ans ;
+}
+*/
+
+long totient( long n , const long* primes){
+  if (n<= 0) return 0;
+  
+
+  long ans = n;
+
+  for (long index =0 ; primes[index]<= n; index++ ){
+    if (n % primes[index] ==0){
+      ans /= primes[index];
+      ans *= primes[index] - 1;
+    }
+  }
+  return ans;
 }
