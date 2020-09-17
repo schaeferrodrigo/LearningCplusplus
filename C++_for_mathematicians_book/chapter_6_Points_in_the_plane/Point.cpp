@@ -75,6 +75,12 @@ bool Point::operator!=( const Point& Q ) const {
   return !(*this == Q);
 }
 
+Point Point::translate( double dx , double dy){
+   double x_1 = getX() + dx;
+   double y_1 = getY() + dy;
+   return Point( x_1 , y_1); 
+}
+
 double dist( Point P , Point Q){
   double dx = P.getX() - Q.getX();
   double dy = P.getY()- Q.getY();
@@ -91,6 +97,7 @@ ostream& operator<<(ostream& os , const Point P){
   os<<"("<<P.getX()<<"," << P.getY()<<")";
   return os;
 }
+
 
 
 
