@@ -29,6 +29,7 @@ public:
   void rotate( double theta ) ;
   bool operator==( const Point& Q ) const ;
   bool operator!=( const Point& Q ) const ;
+  Point translate( double dx , double dy);
  } ;
 
 double dist( Point P , Point Q);

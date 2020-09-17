@@ -41,6 +41,12 @@ int main(){
   if (X!=Y){
     cout << " They are NOT equal!"<< endl;
   }
+
+ Point P(4,5);
+ cout << P.translate(1,2)<< endl;
+
+ Point Q(3,5);
+ cout << Q.translate(1,2).translate(10,10)<<endl;
  return 0;
 }
 
