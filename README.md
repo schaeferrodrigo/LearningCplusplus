@@ -22,7 +22,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](/C++_for_mathematicians_book/README.md) and ![Image](src)
 
 For more details see GitHub Flavored Markdown.
 Jekyll Themes
