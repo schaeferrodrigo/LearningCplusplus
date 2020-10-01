@@ -4,7 +4,7 @@ The project files are result of my studies about C++ on the book C++ for mathema
 From August 20, 2020 to nowadays
 
 
-### Studiend Chapters (until last update):
+### Studied Chapters (until last update):
 
 Part I - Procedures
 
