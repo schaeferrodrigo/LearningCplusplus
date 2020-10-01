@@ -12,6 +12,7 @@ Part I - Procedures
 - Numbers
 - Greatest
 - Random Numbers
+- Arrays
 
 Part II - Objects
 
