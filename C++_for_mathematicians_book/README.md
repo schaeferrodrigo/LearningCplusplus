@@ -1,1 +1,3 @@
-#Codes with explanation and solutions
+# C++ for Mathematicians - An introduction for students and professionals by Edward Scheinerman 
+
+
