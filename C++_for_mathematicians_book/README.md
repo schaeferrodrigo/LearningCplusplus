@@ -1,6 +1,6 @@
 # C++ for Mathematicians - An introduction for students and professionals by Edward Scheinerman 
 
-The project files are result of my studies about C++ on the book C++ for mathematicians.
+The project files are result of my studies about C++ on the book "C++ for mathematicians".
 From August 20, 2020 to nowadays
 
 
