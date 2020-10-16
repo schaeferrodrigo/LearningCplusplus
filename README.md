@@ -6,8 +6,8 @@ This repository is used to register my studies in C++ focused on scientific prog
 
 ## Here you can find:
 
-* Book's exercises
-* Project Euler 
+* [Book's exercises](/C++_for_mathematicians_book/README.md)
+* [Project Euler](/Project_Euler/README.md)
 
 
 
