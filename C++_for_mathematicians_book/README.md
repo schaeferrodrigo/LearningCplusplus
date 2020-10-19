@@ -18,4 +18,4 @@ Part II - Objects
 
 - Points in the Plane
 - Pythagorean Triples
-- Containers
+- [Containers](chapter_8_Containers/README.md)
