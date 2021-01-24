@@ -11,7 +11,7 @@ Name your class Partition and give it the following capabilities:
 * An operator<< for writing Partition objects to the screen. Choose an attractive output format. For example, the partition {1,1,3,4} of 9 can be written to the screen as 9 = 4+3+1+1.
              
              
- [file .cpp](Partition.cpp)
- [file .h](Partition.h)
+ [file .cpp](Partition.cpp) <br>
+ [file .h](Partition.h) <br>
  [Repository link](https://github.com/schaeferrodrigo/LearningCplusplus/tree/master/C%2B%2B_for_mathematicians_book/chapter_8_Containers/C8E5)
                   
