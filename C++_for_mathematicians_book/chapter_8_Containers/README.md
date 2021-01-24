@@ -49,4 +49,7 @@ Name your class Partition and give it the following capabilities:
 * An operator< to give a total order in the set of integer partitions.
 * An operator<< for writing Partition objects to the screen. Choose an attractive output format. For example, the partition {1,1,3,4} of 9 can be written to the screen as 9 = 4+3+1+1.
 
+## Exercise 7.
+
+Create a procedure to calculate bionomial coefficients 
  
