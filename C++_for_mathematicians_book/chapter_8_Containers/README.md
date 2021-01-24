@@ -51,5 +51,5 @@ Name your class Partition and give it the following capabilities:
 
 ## Exercise 7.
 
-Create a procedure to calculate bionomial coefficients ![Fig](C8E7/bin_nk.gif) by the following algorithm. When k=0 or k=n, set ![Fig](C8E7/bin_nk.gif)=1. Otherwise, use the Pascal's triangle identity: 
+Create a procedure to calculate bionomial coefficients ![Fig](C8E7/bin_nk.gif) by the following algorithm. When k=0 or k=n, set ![Fig](C8E7/bin_nk.gif)=1. Otherwise, use the Pascal's triangle identity: ![Fig](C8E7/pascalrule.gif). This can be done recursively, but if the recursion is done naively, the same binomial coefficients are recalculated many times. Instead, devise a procedure that never calculates any binominal coefficient more than once.
  
