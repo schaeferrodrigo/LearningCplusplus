@@ -62,4 +62,12 @@ Create a procedure to calculate bionomial coefficients ![Fig](C8E7/bin_nk.gif) b
 
 
 [Solution](C8E7/)
+
+## Exercise 8.
+
+## Exercise 9.
+
+## Exercise 11.
+
+## Exercise 12.
  
