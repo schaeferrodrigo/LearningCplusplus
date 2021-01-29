@@ -20,3 +20,4 @@ Part II - Objects
 - Points in the Plane
 - Pythagorean Triples
 - [Containers](chapter_8_Containers/README.md)
+- [Modular Arithmetic](chapter_9_Modular_Arithmetic/README.md)
