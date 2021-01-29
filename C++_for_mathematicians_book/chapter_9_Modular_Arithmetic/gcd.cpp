@@ -27,7 +27,7 @@ long gcd( long a , long b, long& x, long& y){
   }
   if(a<0){
     d = gcd(-a, b, x,y);
-    y = -y
+    y = -y;
     return d;
     }
   long aa = b;
@@ -40,5 +40,5 @@ long gcd( long a , long b, long& x, long& y){
   x= yy;
   y=xx-qq*yy;
 
-  return d;  
+  return d;
 }

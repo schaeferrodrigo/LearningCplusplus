@@ -103,27 +103,27 @@ public:
   Mod operator+(const long x) const{return add(Mod(x,mod));}
   Mod operator+=(const Mod& x){
     *this = add(x);
-    return this;
+    return *this;
   }
   Mod operator+=(const long x){
     *this = add(Mod(x,mod));
     return *this;
   }
   Mod operator-(){return Mod(-val,mod);}
-  Mod operator-(const Mod& x)const{
-    return (*this)+(-x);
+  Mod operator-( Mod& x)const{
+    return (*this) + ( -x );
   }
-  Mod operator-(const long x) const {
-    return (*this)+(-x);
+  Mod operator-(long x) const {
+    return (*this )+ ( -x);
   }
-  Mod operator-=(const Mod& x){
+  Mod operator-=( Mod& x){
     *this = *this +(-x);
     return *this;
   }
   Mod multiply(Mod that)const;
   Mod operator*(const Mod& x)const{return multiply(x);}
   Mod operator*(long x ) const{return multiply(Mod(x, mod));}
-  MOD operator*=(const Mod& x){
+  Mod operator*=(const Mod& x){
     *this = multiply(x);
     return *this;
   }
@@ -162,4 +162,4 @@ inline Mod operator/(long x, Mod y){
   return y.inverse()*x;
 }
 
-#endinf
+#endif

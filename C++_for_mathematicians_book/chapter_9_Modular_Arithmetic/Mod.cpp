@@ -1,10 +1,10 @@
 #include "Mod.h"
-#include "gdc.h" // page 48 to copy
+#include "gcd.h" // page 48 to copy
 #include <iostream>
 
 long Mod::default_modulus = INITIAL_DEFAULT_MODULUS;
 
-ostream& operator<<(ostream& os ; const Mod& M ){
+ostream& operator<<(ostream& os , const Mod& M ){
   if (!M.is_invalid()){
     os<<"Mod(" <<M.get_val()<<" , "<< M.get_mod()<<")";
   }
@@ -29,7 +29,7 @@ Mod Mod::multiply(Mod that)const{
   return Mod(val * that.val , mod);
 }
 
-Mod Mod::inverse()}{
+Mod Mod::inverse()const{
   long d,a,b;
   if (is_invalid()){return Mod(0,0);}
   d = gcd(val , mod, a,b);
@@ -47,5 +47,5 @@ Mod Mod::pow(long k ) const{
     return temp*temp;
   }
   Mod temp = pow((k-1)/2);
-  return temp*temp*(*this); 
+  return temp*temp*(*this);
 }

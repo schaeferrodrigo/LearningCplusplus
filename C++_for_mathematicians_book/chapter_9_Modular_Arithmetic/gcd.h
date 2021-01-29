@@ -13,6 +13,6 @@ CALCULATE THE GREATEST COMMON DIVISOR OF TWO INTEGERS
 */
 
 
-long gcd( long a , long b, long& x, long& y)
+long gcd( long a , long b, long& x, long& y);
 
 #endif
