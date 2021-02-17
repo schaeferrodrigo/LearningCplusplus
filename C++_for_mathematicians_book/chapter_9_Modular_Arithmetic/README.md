@@ -14,7 +14,7 @@ Your procedure should be declared like this:
 Mod crt( const Mod a, const Mod b);
 ```
 
-[Solution](/C9E1) 
+[Solution](/C9E1/) 
 
 ## Exercise 2.
 
