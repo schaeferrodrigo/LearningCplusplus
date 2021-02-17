@@ -14,7 +14,7 @@ Your procedure should be declared like this:
 Mod crt( const Mod a, const Mod b);
 ```
 
-[Solution](/C9E1/) 
+[Solution](C9E1/) 
 
 ## Exercise 2.
 
@@ -29,4 +29,4 @@ Create a class to represent the time of day. Call you class ```Time```and give i
 * Define ```ampm()```and ```military()```methods to control how the time is printed (see the next bullet). These methods should affect how all ```Time```objects are printed. Also provided a ```is_ampm()``` method that returns ```true```if the current output style is to use AM/PM and ```false```if the current style is military (24 hour).
 * Define << for printing ```Time```objects to the screen. The style of the output should be either be ```5:03:24 pm```or ```17:03:24```as specified by the user with the methods ```ampm()```and ```military()```, respectively. Note the zero in front of the 3 but not in front of 5. Midnight should be reported either as ```12:00:00 am``` or ```0:00:00```and noon as ```12:00:00 pm```or ```12:00:00```as appropriate.
 
-[Solution](/C9E2)
+[Solution](C9E2/)
