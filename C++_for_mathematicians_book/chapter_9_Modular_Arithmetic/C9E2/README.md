@@ -97,5 +97,5 @@ long twenty_four_boud(long value );
 
 
 [.h file](Time.h) <br>
-[.cpp file](Time.cpp)
+[.cpp file](Time.cpp) <br>
 [repository link](https://github.com/schaeferrodrigo/LearningCplusplus/tree/master/C%2B%2B_for_mathematicians_book/chapter_9_Modular_Arithmetic/C9E2)
