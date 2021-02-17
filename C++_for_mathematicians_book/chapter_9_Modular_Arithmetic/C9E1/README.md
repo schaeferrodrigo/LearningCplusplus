@@ -9,8 +9,11 @@ Your procedure should be declared like this:
 
 ```
 Mod crt( const Mod a, const Mod b);
+
 ```
 
+
+## Solution 
 ```
 #include "crt.h"
 #include "../gcd.h"
@@ -40,6 +43,8 @@ Mod crt(const Mod a , const Mod b){
   Mod solution;
   solution = (a_1-b_1)/(n-m);
   return solution;
-}```
+}
+
+```
 
 [link](ctr.cpp)
