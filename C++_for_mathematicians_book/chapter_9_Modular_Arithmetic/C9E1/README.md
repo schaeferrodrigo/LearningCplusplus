@@ -41,3 +41,5 @@ Mod crt(const Mod a , const Mod b){
   solution = (a_1-b_1)/(n-m);
   return solution;
 }```
+
+[link](ctr.cpp)
