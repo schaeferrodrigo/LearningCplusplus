@@ -53,3 +53,15 @@ Let S denote the set {sqrt(n): n in Z, n>= 0}. Define an operation * on S by x *
 Include methods to get the value n, to convert an element of S into a decimal approximation, and ```operator<<```to write elements of S to the screen.
 
 [Solution](C9E4/)
+
+## Exercise 5.
+
+Create a class to represent Hamilton's quaternions. 
+
+The *quartenions* are an extension to the complex numbers. Each quartenions can be written as a+bi+cj+dk where a,b,c and d are real numbers.
+
+Include the standard operations +, - (unary and binary forms), * ,and /, and the combined assignments forms +=, -=, and /=.
+
+[Solution](C9E5/)
+
+
