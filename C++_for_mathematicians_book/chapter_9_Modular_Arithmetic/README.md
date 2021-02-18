@@ -46,3 +46,10 @@ Create a class named ```EuclidenaVector```to  represent vectors in a Euclidean s
 * There should be na ```operator<<```for writing vectors to the computer screen.
 
 [Solution](C9E3/)
+
+## Exercise 4.
+
+Let S denote the set {sqrt(n): n in Z, n>= 0}. Define an operation * on S by x * y = sqrt( x^2 + y^2 ). Create a C++ class to represent elements of the S that includes an ```operator*```that implements S's operation.
+Include methods to get the value n, to convert an element of S into a decimal approximation, and ```operator<<```to write elements of S to the screen.
+
+[Solution](C9E4/)
