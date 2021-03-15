@@ -40,7 +40,7 @@ Permutation::Permutation(const Permutation& that){
   }
 }
 
-void Permutation::Permutation(long i , long j){
+ void Permutation::swap(long i , long j){
   if((i<= 0)||(i>n)||(j<=0)||(j>n)||(j==i)){return;}
 
   long temp = data[i];
@@ -52,8 +52,8 @@ void Permutation::randomize(){
   for(long index = 1; index < n; index++ ){
     long j = unif(n-index+1)-1+ index;
     long temp = data[j];
-    data[j] = data[k];
-    data[k] = temp;
+    data[j] = data[index];
+    data[index] = temp;
   }
 }
 
@@ -63,7 +63,7 @@ void Permutation::reset(){
   }
 }
 
-bool Permutation::check(){
+bool Permutation::check()const{
   long* temp;
   temp = new long[n+1];
   for(long index =1 ; index <= n; index++){
@@ -85,7 +85,7 @@ bool Permutation::check(){
 }
 
 long Permutation::of(long k) const{
-  if( (k<1)||(k>)){return k;}
+  if( (k<1)||(k>n)){return k;}
   return data[k];
 }
 
@@ -104,7 +104,7 @@ Permutation Permutation::operator*(const Permutation& that)const{
   long* temp = new long[nmax+1];
 
   for(long index = 1; index<= n ; index++){
-    temp[index] = of(that(k));
+    temp[index] = of(that(index));
   }
 
   Permutation ans(nmax , temp);
@@ -160,8 +160,8 @@ bool Permutation::isIdentity()const{
 ostream& operator<<(ostream& os,const Permutation& P){
   long n = P.getN();
   bool* done = new bool[n+1];
-  for(long index = 1; index<= n, index++){
-    done[k] = false;
+  for(long index = 1; index<= n; index++){
+    done[index] = false;
   }
   for(long k=1; k<=n; k++){
     if(!done[k]){
