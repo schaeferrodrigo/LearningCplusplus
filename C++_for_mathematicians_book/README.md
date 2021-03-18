@@ -22,3 +22,4 @@ Part II - Objects
 - [Containers](chapter_8_Containers/README.md)
 - [Modular Arithmetic](chapter_9_Modular_Arithmetic/README.md)
 - [The Projective Plane](chapter_10_Projective_Plane.md)
+- [Permutations](chapter_11_Permutations.md)
