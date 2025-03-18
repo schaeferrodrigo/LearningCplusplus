@@ -3,8 +3,8 @@
 
 
 /*
-Step 7: Delte a Crew Member to the Dynamic Array
-Objective: Resize the dynamic array to delete a new member.
+Step 8: Sort Crew by Years of Service
+Objective: Use function pointers to sort the crew array.
 
 */
 
@@ -34,33 +34,23 @@ void printCrew(CrewMember** members, int size) {
 
 }
 
-bool lookForByName(CrewMember** members, int size , std::string name, int &index){
-
-	for (index ; index < size ; index++){
-
-		if ((*(members+index))->name == name){
-
-			return true;
-		}
-	}
-	return false;
-
-}
-
 void promoteCrewMember(CrewMember** members, int size ,std::string name, std::string newRole) {
 
-	int index = 0;
+	bool  if_exists = false;
+	for (int i = 0 ; i < size; i++) {
+		
+		if ( (*(members+i))->name == name) {
 
-	bool  if_exists = lookForByName(members, size, name, index  );
+			(*(members + i))->role = newRole;
 
-	if(!if_exists){
-		std::cout <<"\n" << name << " is not registered. Please, check if the name is correct.\n" << std::endl;
-		return;
+			if_exists = true;
+			std::cout <<"\n" << (*(members + i))->name << " was promoted to " << (*(members + i))->role <<"\n"<< std::endl;
+		}
 	}
 
-
-	(*(members + index))->role = newRole;
-	std::cout <<"\n" << (*(members + index))->name << " was promoted to " << (*(members + index))->role <<"\n"<< std::endl;
+	if (if_exists == false) {
+		std::cout <<"\n" << name << " is not registered. Please, check if the name is correct.\n" << std::endl;
+	}
 
 }
 
@@ -85,39 +75,22 @@ void addNewCrewMember(CrewMember*** members, int* size, CrewMember* newMember){
 	std::cout<< "New member added.\n"<<std::endl;
 }
 
-
-void removeCrewMember(CrewMember*** members, int* size, std::string name){
-
-	int indexToBeDeleted = 0;
-	bool foundMember = lookForByName(*members, *size, name, indexToBeDeleted);
-
-	if (!foundMember){
-		std::cout << " There is no " << name << " in crew register. Please, check if the name is correct."<< std::endl;
-        return;
-	}
+bool compareByYearsOfService(CrewMember* a, CrewMember* b) {
+    return a->yearsOfService < b->yearsOfService;
+}
 
 
-	CrewMember** newArray = new CrewMember*[*size-1];
-
-	int newIndex = 0;
-	for (int i = 0; i < *size; i++){
-
-		if(i != indexToBeDeleted){
-           newArray[newIndex] = (*members)[i];
-		   newIndex++;
-
-		}
-
-	}
-
-	delete (*members)[indexToBeDeleted];
-	delete[] *members;
-	
-	*members = newArray;
-	(*size)--;
-	
-	std::cout << name<< " was removed"<<std::endl;
-
+void sortCrew(CrewMember** members, int size, bool (*compareFunc)(CrewMember*, CrewMember*)) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (!compareFunc(members[j], members[j + 1])) {
+                // Swap members[j] and members[j + 1]
+                CrewMember* temp = members[j];
+                members[j] = members[j + 1];
+                members[j + 1] = temp;
+            }
+        }
+    }
 }
 
 
@@ -143,13 +116,9 @@ int main() {
 	
 	printCrew(crewArray, numberMembers);
  
-   promoteCrewMember(crewArray, numberMembers, "Riley", "Captain");
+   promoteCrewMember(crewArray, numberMembers, "Rile", "Captain");
 
 	printCrew(crewArray, numberMembers);
-    
-	int index = 0;
-	bool status = lookForByName(crewArray, numberMembers,"Zara", index);
-	std::cout<< status<<" " <<index <<std::endl; 
 
 
 	//add New Member
@@ -158,14 +127,14 @@ int main() {
 	initializeCrewMember(newMember, "Ana", "Mechanic", 2);
 	addNewCrewMember(&crewArray, &numberMembers, newMember);
 	printCrew(crewArray, numberMembers);
-
-
-	// remove member
-
-	removeCrewMember(&crewArray, &numberMembers, "Zara");
-	printCrew(crewArray, numberMembers);
+	
 
 	
+	//Sort Crew members
+
+	sortCrew(crewArray, numberMembers, compareByYearsOfService);
+    std::cout << "\nAfter Sorting by Years of Service:\n";
+    printCrew(crewArray, numberMembers);
 
 	//Clean up memory
 
